@@ -8,7 +8,7 @@ cd ~
 git clone https://github.com/vimtoo-com/vim-for-c-conf.git
 cd vim-for-c-conf
 git submodule update --init --recursive
-./install.sh
+. ./install.sh
 ```
 
 
