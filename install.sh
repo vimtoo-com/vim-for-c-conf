@@ -50,7 +50,7 @@ sed -i  '/^flags/i--FLAGS--' ~/.ycm_extra_conf.py
 sed -i '/^flags/,/^]/d' ~/.ycm_extra_conf.py
 
 
-sed -i $'/FLAGS/s/--FLAGS--/flags = [\'std=c99\',\\n\'-Wall\',\\n\'-Wextra\',\\n\'-Werror\',\\n\'-fexceptions\',\\n\'-DNDEBUG\',\\n\'-x\',\\n\'c\',\\n\'-isystem\',\\n\'\/usr\/include\',]/' ~/.ycm_extra_conf.py
+sed -i $'/FLAGS/s/--FLAGS--/flags = [\'-std=c99\',\\n\'-Wall\',\\n\'-Wextra\',\\n\'-Werror\',\\n\'-fexceptions\',\\n\'-DNDEBUG\',\\n\'-x\',\\n\'c\',\\n\'-isystem\',\\n\'\/usr\/include\',]/' ~/.ycm_extra_conf.py
 
 sed -i '/^if platform/d' ~/.ycm_extra_conf.py
 sed -i $'/append( \'-std=c++/d' ~/.ycm_extra_conf.py
