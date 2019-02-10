@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /centos7-source-install-vim/install.sh
+. ./centos7-source-install-vim/install.sh
 
 yum install -y cmake3
 
