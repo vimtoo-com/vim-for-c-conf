@@ -1,5 +1,9 @@
 #!/bin/bash
 
+. /centos7-source-install-vim/install.sh
+
+yum install -y cmake3
+
 
 git clone https://github.com/gmarik/Vundle.vim.git  ~/.vim/bundle/Vundle.vim 
 yum  install -y clang-devel clang  clang-analyzer
@@ -48,5 +52,5 @@ sed -i '/^flags/,/^]/d' ~/.ycm_extra_conf.py
 
 sed -i $'/FLAGS/s/--FLAGS--/flags = [\'std=c99\',\\n\'-Wall\',\\n\'-Wextra\',\\n\'-Werror\',\\n\'-fexceptions\',\\n\'-DNDEBUG\',\\n\'-x\',\\n\'c\',\\n\'-isystem\',\\n\'\/usr\/include\',]/' ~/.ycm_extra_conf.py
 
-
-
+sed -i '/^if platform/d' ~/.ycm_extra_conf.py
+sed -i $'/append( \'-std=c++/d' ~/.ycm_extra_conf.py
