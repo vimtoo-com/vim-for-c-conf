@@ -2,8 +2,6 @@
 
 . ./centos7-source-install-vim/install.sh
 
-yum install -y cmake3
-
 
 git clone https://github.com/gmarik/Vundle.vim.git  ~/.vim/bundle/Vundle.vim 
 yum  install -y clang-devel clang  clang-analyzer
@@ -12,17 +10,13 @@ mkdir -p ~/.vim/bundle && \
   git clone https://github.com/Valloric/YouCompleteMe.git \
   ~/.vim/bundle/YouCompleteMe
 
-
 cd ~/.vim/bundle/YouCompleteMe
-
 
 git submodule update --init --recursive
 
 ./install.sh  --clang-completer
 
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py  ~
-
-
 
 cat > ~/.vimrc <<EOF
 set nocompatible
