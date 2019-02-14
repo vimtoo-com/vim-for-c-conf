@@ -18,4 +18,23 @@ git submodule update --init --recursive
 . ./install.sh
 ```
 
+### 联网问题可以使用
 
+
+```bash
+
+type git &> /dev/null
+
+if [ $?  -eq 1 ] ; then
+    yum install -y git
+fi
+
+cd ~
+git clone https://gitee.com/vimtoo/vim-for-c-conf-static.git
+
+cd vim-for-c-conf-static
+time . ./install.sh
+```
+
+### 参考
+<https://gitee.com/vimtoo/vim-for-c-conf-static/>
