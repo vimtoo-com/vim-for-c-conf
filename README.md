@@ -37,4 +37,5 @@ time . ./install.sh
 ```
 
 ### 参考
+
 <https://gitee.com/vimtoo/vim-for-c-conf-static/>
